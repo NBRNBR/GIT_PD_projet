@@ -1,0 +1,43 @@
+#N canvas 255 55 955 366 10;
+#X obj 373 135 Loop_player;
+#X obj 540 247 line~;
+#X msg 540 227 \$1 20;
+#X obj 544 193 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 540 210 5 0 0 0 - - -, f 5;
+#X obj 384 267 *~;
+#X obj 426 266 *~;
+#X obj 393 293 dac~;
+#X obj 426 175 Helmholtz_1;
+#X obj 283 238 GEM_FUN;
+#X text 15 14 Pour le moment \, j'ai plus concentré mes efforts sur
+l'analyse audio car c'est un sujet que je trouve assez complexe \,
+donc le volet GEM est encore bien mince. C'est plus des expérimentations
+très embryonnaires qui me permettent de voir à quoi pourrait servir
+d'avoir les informations de pitch pour le visuel. À ce stade pour
+le visuel \, il me semble que ce sera beaucoup plus concluant lorsque
+je vais m'attaquer à l'analyse des transients et du tempo.;
+#X text 510 20 // Test de "qualité" de l'analyseur audio : Je me renvois
+un signal audio pour faire des tests et vérifier si l'analyseur de
+pitch fait bien le travail. La sortie de gauche est la source \, la
+sortie de droite l'oscillateur de l'analyseur de pitch. Pour l'instant
+\, ça fonctionne super bien avec des sons monophoniques et seuls (ex:
+sax hit dans les snds) mais moins (évidemment) avec les chansons complètes.
+Mes deux prochaines étapes : faire un test multibande avec helmholtz
+\; séparer chaque chanson que je vais lui envoyer en bandes pour essayer
+d'avoir une meilleure détection. 2e \, trouver une façon d'arrêter
+l'envoi de données en-dessous d'un certain seuil de "fidelité".;
+#X connect 0 0 8 0;
+#X connect 0 0 5 0;
+#X connect 0 0 8 1;
+#X connect 0 1 8 0;
+#X connect 0 1 8 1;
+#X connect 1 0 6 1;
+#X connect 1 0 5 1;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 1;
+#X connect 8 0 6 0;
+#X connect 8 1 9 0;
