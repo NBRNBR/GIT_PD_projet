@@ -1,14 +1,14 @@
-#N canvas 255 55 955 366 10;
+#N canvas 543 169 955 548 10;
 #X obj 373 135 Loop_player;
 #X obj 540 247 line~;
 #X msg 540 227 \$1 20;
 #X obj 544 193 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 3200 1;
 #X floatatom 540 210 5 0 0 0 - - -, f 5;
 #X obj 384 267 *~;
 #X obj 426 266 *~;
 #X obj 393 293 dac~;
-#X obj 426 175 Helmholtz_1;
+#X obj 403 207 Helmholtz_1;
 #X obj 283 238 GEM_FUN;
 #X text 15 14 Pour le moment \, j'ai plus concentré mes efforts sur
 l'analyse audio car c'est un sujet que je trouve assez complexe \,
@@ -27,6 +27,8 @@ Mes deux prochaines étapes : faire un test multibande avec helmholtz
 \; séparer chaque chanson que je vais lui envoyer en bandes pour essayer
 d'avoir une meilleure détection. 2e \, trouver une façon d'arrêter
 l'envoi de données en-dessous d'un certain seuil de "fidelité".;
+#X obj 455 131 Live_input;
+#X obj 143 303 GEM_win;
 #X connect 0 0 8 0;
 #X connect 0 0 5 0;
 #X connect 0 0 8 1;
@@ -39,5 +41,8 @@ l'envoi de données en-dessous d'un certain seuil de "fidelité".;
 #X connect 4 0 2 0;
 #X connect 5 0 7 0;
 #X connect 6 0 7 1;
-#X connect 8 0 6 0;
 #X connect 8 1 9 0;
+#X connect 12 0 8 0;
+#X connect 12 0 5 0;
+#X connect 12 1 8 1;
+#X connect 12 1 6 0;

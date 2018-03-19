@@ -1,4 +1,4 @@
-#N canvas 571 76 720 424 10;
+#N canvas 606 135 720 424 10;
 #X obj 35 21 inlet~ audio1;
 #X floatatom 76 243 10 0 0 0 - - -, f 10;
 #X obj 75 304 osc~;
@@ -68,7 +68,7 @@ rate of pitch messages. This may be useful in the case of longer analysis
 frames. Note that overlap multiplies the object's CPU load.;
 #X msg 124 423 bias \$1;
 #X obj 127 397 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--260097 -1 9000 0;
+-260097 -1 7920 0;
 #X floatatom 182 423 5 0 0 0 - - -, f 5;
 #X text 287 382 Bias (range 0 - 1) is used to favour the first peaks
 found in the SNAC function. If bias is set to a higher level \, you
@@ -78,7 +78,7 @@ according to your input material. For example \, for a sound type with
 weak fundamental \, bias is better not set too high. Default is 0.2.
 ;
 #X obj 126 476 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--260097 -1 9200 0;
+-260097 -1 7999 0;
 #X floatatom 201 506 5 0 0 0 - - -, f 5;
 #X msg 123 506 fidelity \$1;
 #X text 287 489 Fidelity (range 0 - 1 ) determines the fidelity threshold
@@ -92,7 +92,7 @@ pitch is the average pitch of an analysis frame. Framesize is always
 a power of two \, because FFT is used for efficiency.;
 #X text 93 138 lowest detectable pitch (Hz);
 #X obj 127 562 hsl 100 15 0 2000 0 0 empty empty empty -2 -8 0 10 -262144
--260097 -1 9900 0;
+-260097 -1 6395 0;
 #X floatatom 199 591 5 0 0 0 - - -, f 5;
 #X msg 124 590 maxfreq \$1;
 #X text 288 560 Maxfreq is the maximum frequency which will possibly
@@ -106,7 +106,7 @@ or 2048);
 #X obj 142 119 outlet;
 #X obj 61 269 loadbang;
 #X obj 127 318 hsl 100 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
--260097 -1 3700 0;
+-260097 -1 7227 0;
 #X floatatom 182 344 5 0 0 0 - - -, f 5;
 #X msg 124 344 sens \$1;
 #X text 288 305 Sens (sensitivity) determines a minimum sound level

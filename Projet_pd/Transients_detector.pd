@@ -1,0 +1,60 @@
+#N canvas 591 567 1056 427 10;
+#X obj 19 48 f;
+#X obj 119 91 pipe 5;
+#X floatatom 19 69 5 0 0 0 - - -, f 5;
+#X obj 19 27 r env_L;
+#X obj 161 32 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4600 1;
+#X text 157 18 Délai du pipe;
+#X floatatom 158 52 5 0 0 0 - - -, f 5;
+#X obj 222 77 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3070 1;
+#X floatatom 219 97 5 0 0 0 - - -, f 5;
+#X text 216 61 Threshold_dB;
+#X obj 82 154 hsl 128 15 0 400 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12300 1;
+#X floatatom 79 174 5 0 0 0 - - -, f 5;
+#X text 76 138 delay_before_next_trigger;
+#N canvas 1175 462 450 300 gate 1;
+#X obj 52 37 loadbang;
+#X obj 168 88 inlet;
+#X obj 168 149 gate;
+#X obj 168 170 outlet;
+#X msg 168 128 1;
+#X obj 206 128 inlet;
+#X floatatom 168 109 5 0 0 0 - - -, f 5;
+#X connect 0 0 4 0;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 1;
+#X connect 6 0 4 0;
+#X restore 21 215 pd gate;
+#X obj 22 196 delay 100;
+#X obj 22 111 expr if ($f1 > ($f2+$f3) \, 1 \, 0);
+#X floatatom 22 132 5 0 0 0 - - -, f 5;
+#X obj 22 149 sel 1;
+#X obj 22 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 21 233 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 21 252 s attack;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 1 0 15 1;
+#X connect 2 0 15 0;
+#X connect 3 0 0 0;
+#X connect 4 0 6 0;
+#X connect 6 0 1 1;
+#X connect 7 0 8 0;
+#X connect 8 0 15 2;
+#X connect 10 0 11 0;
+#X connect 11 0 14 1;
+#X connect 13 0 19 0;
+#X connect 14 0 13 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 14 0;
+#X connect 18 0 13 1;
+#X connect 19 0 20 0;
