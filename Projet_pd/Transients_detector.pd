@@ -1,21 +1,21 @@
-#N canvas 591 567 1056 427 10;
+#N canvas 344 177 632 427 10;
 #X obj 19 48 f;
 #X obj 119 91 pipe 5;
 #X floatatom 19 69 5 0 0 0 - - -, f 5;
 #X obj 19 27 r env_L;
 #X obj 161 32 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4600 1;
+-1 -1 0 1;
 #X text 157 18 Délai du pipe;
 #X floatatom 158 52 5 0 0 0 - - -, f 5;
 #X obj 222 77 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3070 1;
+-1 -1 0 1;
 #X floatatom 219 97 5 0 0 0 - - -, f 5;
 #X text 216 61 Threshold_dB;
 #X obj 82 154 hsl 128 15 0 400 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12300 1;
+-1 -1 0 1;
 #X floatatom 79 174 5 0 0 0 - - -, f 5;
 #X text 76 138 delay_before_next_trigger;
-#N canvas 1175 462 450 300 gate 1;
+#N canvas 561 351 450 300 gate 1;
 #X obj 52 37 loadbang;
 #X obj 168 88 inlet;
 #X obj 168 149 gate;
@@ -39,6 +39,8 @@
 #X obj 21 233 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 21 252 s attack;
+#X obj 579 111 env~;
+#X text 138 5 "Longueur du transient";
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 1 0 15 1;

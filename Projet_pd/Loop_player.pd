@@ -1,4 +1,4 @@
-#N canvas 305 113 752 569 10;
+#N canvas 305 113 1224 738 10;
 #X obj 26 180 openpanel;
 #X obj 26 161 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -39,6 +39,8 @@ le plus possible la mélodie du piano dans le fichier "Olafur_Fryda)
 #X obj 74 377 *~;
 #X msg 340 368 1;
 #X obj 357 330 loadbang;
+#X obj 98 555 spectre~;
+#X obj 431 552 spectre~;
 #X connect 0 0 20 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -62,7 +64,9 @@ le plus possible la mélodie du piano dans le fichier "Olafur_Fryda)
 #X connect 25 0 26 1;
 #X connect 25 0 27 1;
 #X connect 26 0 19 0;
+#X connect 26 0 31 0;
 #X connect 27 0 18 0;
+#X connect 27 0 30 0;
 #X connect 28 0 26 1;
 #X connect 28 0 27 1;
 #X connect 29 0 28 0;
