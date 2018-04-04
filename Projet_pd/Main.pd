@@ -1,23 +1,36 @@
-#N canvas 237 22 1021 643 10;
-#X obj 373 135 Loop_player;
-#X obj 540 247 line~;
-#X msg 540 227 \$1 20;
-#X obj 543 188 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X floatatom 540 210 5 0 0 0 - - -, f 5;
-#X obj 384 267 *~;
-#X obj 426 266 *~;
-#X obj 393 293 dac~;
-#X obj 403 207 Helmholtz_1;
-#X obj 283 238 GEM_FUN;
-#X obj 455 131 Live_input;
-#X obj 46 166 GEM_win;
-#X obj 352 331 transients_detector;
-#X connect 0 0 8 0;
+#N canvas 911 35 884 725 10;
+#X obj 509 280 Loop_player;
+#X obj 676 392 line~;
+#X msg 676 372 \$1 20;
+#X obj 679 333 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2900 1;
+#X floatatom 676 355 5 0 0 0 - - -, f 5;
+#X obj 521 420 *~;
+#X obj 563 419 *~;
+#X obj 530 446 dac~;
+#X obj 261 471 GEM_FUN;
+#X obj 591 276 Live_input;
+#X obj 34 26 GEM_win;
+#N canvas 341 32 680 490 audio_detection 0;
+#X obj 112 98 Helmholtz_1;
+#X obj 58 160 transients_detector;
+#X obj 58 139 suivi_amp;
+#X obj 415 417 bruit;
+#X obj 57 41 noise_gate;
+#X text 185 93 Pitch detection \, left outlet is the results of the
+analyse with a sinewave \, right inlet is the pitch data in Hz;
+#X obj 57 65 r~ no_noise;
+#X text 124 42 receive the audio source and clean the signal from the
+noise;
+#X text 187 138 cleaned envelope follower from the audio source \,
+sent into a transient detector;
+#X connect 2 0 1 0;
+#X connect 6 0 0 0;
+#X connect 6 0 0 1;
+#X restore 712 450 pd audio_detection;
+#X obj 209 26 color_randomness;
 #X connect 0 0 5 0;
-#X connect 0 0 8 1;
-#X connect 0 1 8 0;
-#X connect 0 1 8 1;
+#X connect 0 1 6 0;
 #X connect 1 0 6 1;
 #X connect 1 0 5 1;
 #X connect 2 0 1 0;
@@ -25,8 +38,3 @@
 #X connect 4 0 2 0;
 #X connect 5 0 7 0;
 #X connect 6 0 7 1;
-#X connect 8 1 9 0;
-#X connect 10 0 8 0;
-#X connect 10 0 5 0;
-#X connect 10 1 8 1;
-#X connect 10 1 6 0;
