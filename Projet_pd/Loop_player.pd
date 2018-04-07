@@ -1,12 +1,12 @@
-#N canvas 2 22 1224 738 10;
-#X obj 26 180 openpanel;
-#X obj 26 161 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 26 224 soundfiler;
-#X obj 26 246 s samplesize;
+#N canvas 115 30 1224 738 10;
+#X obj 103 162 openpanel;
+#X obj 104 121 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 103 206 soundfiler;
+#X obj 103 228 s samplesize;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array LoopR 1.12896e+07 float 2;
-#X coords 0 1 1.12896e+07 -1 200 140 1 0 0;
+#X array LoopR 1.30977e+07 float 2;
+#X coords 0 1 1.30977e+07 -1 200 140 1 0 0;
 #X restore 962 265 graph;
 #X obj 757 91 r samplesize;
 #X floatatom 757 113 30 0 0 0 - - -, f 30;
@@ -21,13 +21,13 @@
 #X obj 835 330 tabread4~ LoopR;
 #X obj 712 329 tabread4~ LoopL;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array LoopL 1.12896e+07 float 2;
-#X coords 0 1 1.12896e+07 -1 200 140 1 0 0;
+#X array LoopL 1.30977e+07 float 2;
+#X coords 0 1 1.30977e+07 -1 200 140 1 0 0;
 #X restore 963 99 graph;
 #X obj 777 453 outlet~ L;
 #X obj 877 452 outlet~ R;
-#X obj 26 111 inlet load;
-#X text 48 160 Open a soundfile;
+#X obj 104 80 inlet load;
+#X text 126 120 Open a soundfile;
 #X text 871 296 STOP;
 #X msg 845 295 0;
 #X obj 836 352 *~;
@@ -40,7 +40,7 @@
 #X text 72 28 Loop_Player. For file longer than 6 min \, change the
 maxsize (nb of samples of the audio file) with this formula : number
 of seconds * samplerate.;
-#X msg 26 202 read -maxsize 1.8522e+07 -resize \$1 LoopL LoopR, f
+#X msg 103 184 read -maxsize 1.8522e+07 -resize \$1 LoopL LoopR, f
 91;
 #X connect 0 0 32 0;
 #X connect 1 0 0 0;
@@ -73,3 +73,4 @@ of seconds * samplerate.;
 #X connect 26 0 25 1;
 #X connect 27 0 26 0;
 #X connect 32 0 2 0;
+#X coords 0 -1 1 1 140 60 1 100 100;

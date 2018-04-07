@@ -1,7 +1,7 @@
 #N canvas 365 42 330 545 10;
 #X obj 152 22 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X obj 111 396 vradio 15 1 0 3 gemfps empty empty 0 -8 0 10 -204800
+#X obj 111 396 vradio 15 1 0 4 gemfps empty empty 0 -8 0 10 -204800
 -99865 -262144 0;
 #X text 145 129 Destroy window;
 #X text 151 144 Create window;
@@ -43,7 +43,8 @@
 #X obj 624 159 s \$0-gem_win;
 #X msg 624 130 frame \$1;
 #X msg 654 106 10;
-#X msg 688 106 200;
+#X msg 714 107 200;
+#X msg 684 106 60;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 1 1 2 0;
@@ -78,7 +79,8 @@
 #X connect 28 0 25 0;
 #X connect 31 0 32 0;
 #X connect 31 1 35 0;
-#X connect 31 2 36 0;
+#X connect 31 2 37 0;
+#X connect 31 3 36 0;
 #X connect 32 0 34 0;
 #X connect 34 0 33 0;
 #X connect 35 0 34 0;
@@ -105,5 +107,6 @@
 #X text 127 270 Full-Screen 1 mon;
 #X text 127 283 Full-Screen 2 mon;
 #X text 180 410 10(fast);
-#X text 138 425 200(slowmodeel);
-#X coords 0 -1 1 1 140 360 1 100 100;
+#X text 138 440 200(slowmodeel);
+#X text 216 425 60;
+#X coords 0 -1 1 1 140 370 1 100 100;
