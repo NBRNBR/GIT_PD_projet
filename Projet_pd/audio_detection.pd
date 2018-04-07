@@ -1,0 +1,15 @@
+#N canvas 415 112 731 393 10;
+#X obj 323 73 r pitch;
+#X obj 375 73 r env_fol;
+#X obj 439 73 r attack;
+#X obj 288 254 outlet pitch;
+#X obj 368 254 outlet enveloppe;
+#X obj 472 254 outlet attack;
+#X text 101 143 pitch;
+#X text 142 117 send audio;
+#X text 145 144 enveloppe;
+#X text 210 144 attack;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X coords 0 -1 1 1 150 60 1 100 100;

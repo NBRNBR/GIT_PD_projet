@@ -1,17 +1,17 @@
-#N canvas 780 414 901 427 10;
+#N canvas 250 162 901 521 10;
 #X obj 19 48 f;
 #X obj 119 91 pipe 5;
 #X floatatom 19 69 5 0 0 0 - - -, f 5;
 #X obj 161 32 hsl 128 15 0 20 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 500 1;
+-1 -1 7870 1;
 #X text 157 18 Délai du pipe;
 #X floatatom 158 52 5 0 0 0 - - -, f 5;
 #X obj 222 77 hsl 128 15 0 30 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 423 1;
+-1 -1 578 1;
 #X floatatom 219 97 5 0 0 0 - - -, f 5;
 #X text 216 61 Threshold_dB;
 #X obj 82 154 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 571 1;
+-1 -1 698 1;
 #X floatatom 79 174 5 0 0 0 - - -, f 5;
 #X text 76 138 delay_before_next_trigger;
 #N canvas 561 351 450 300 gate 0;
@@ -41,21 +41,22 @@
 #X text 138 5 "Longueur du transient";
 #X obj 19 27 inlet env_f;
 #X obj 382 15 loadbang;
-#X msg 382 36 5 1.8 55;
 #X obj 382 167 unpack f f f;
 #X obj 382 186 s \$0-del;
 #X obj 415 204 s \$0-thres;
 #X obj 384 223 s \$0-gate;
-#X text 442 -1 Certain presets for various;
-#X text 443 16 style of audio;
 #X obj 292 16 r \$0-del;
 #X obj 302 61 r \$0-thres;
 #X obj 235 138 r \$0-gate;
-#X msg 390 55 0.787 1 45;
-#X text 439 36 Rock \, or songs with small dynamics and fast tempo
+#X msg 390 75 0.787 1 45;
+#X text 454 56 Rock \, or songs with small dynamics and fast tempo
 ;
-#X text 460 56 No drums or big dynamics and slow tempo (orchestral
+#X text 460 76 No drums or big dynamics and slow tempo (orchestral
 \, piano);
+#X text 436 4 Certain presets for various style of audio \, these are
+generic \, but it could worth trying differents one for better results
+;
+#X msg 382 56 12 1.365 55;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 1 0 14 1;
@@ -75,12 +76,12 @@
 #X connect 17 0 12 1;
 #X connect 18 0 19 0;
 #X connect 21 0 0 0;
-#X connect 22 0 23 0;
+#X connect 22 0 34 0;
 #X connect 23 0 24 0;
-#X connect 24 0 25 0;
-#X connect 24 1 26 0;
-#X connect 24 2 27 0;
-#X connect 30 0 3 0;
-#X connect 31 0 6 0;
-#X connect 32 0 9 0;
-#X connect 33 0 24 0;
+#X connect 23 1 25 0;
+#X connect 23 2 26 0;
+#X connect 27 0 3 0;
+#X connect 28 0 6 0;
+#X connect 29 0 9 0;
+#X connect 30 0 23 0;
+#X connect 34 0 23 0;

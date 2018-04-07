@@ -1,4 +1,4 @@
-#N canvas 970 1102 330 545 10;
+#N canvas 365 42 330 545 10;
 #X obj 152 22 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X obj 111 396 vradio 15 1 0 3 gemfps empty empty 0 -8 0 10 -204800
@@ -99,7 +99,7 @@
 #X text 216 345 x4;
 #X text 216 360 x8;
 #X obj 110 331 vradio 15 1 0 3 gemquality empty empty 0 -8 0 10 -204800
--99865 -262144 0;
+-99865 -262144 2;
 #X text 156 395 20 (default);
 #X text 106 114 Gem basic win;
 #X text 127 270 Full-Screen 1 mon;

@@ -1,0 +1,25 @@
+#N canvas 880 233 360 463 10;
+#X obj 155 120 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
+-1 -1 10400 1;
+#X obj 110 120 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -261234
+-1 -1 12700 1;
+#X obj 133 120 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -204786
+-1 -1 7100 1;
+#X obj 73 410 outlet R;
+#X obj 129 410 outlet G;
+#X obj 184 410 outlet B;
+#X text 111 275 R;
+#X text 135 276 G;
+#X text 156 276 B;
+#X text 106 251 Send colors;
+#X text 121 263 values;
+#X msg 182 350 bang;
+#X msg 133 350 bang;
+#X connect 0 0 5 0;
+#X connect 0 0 11 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 2 0 12 0;
+#X connect 11 0 3 0;
+#X connect 12 0 3 0;
+#X coords 0 -1 1 1 80 195 1 100 100;

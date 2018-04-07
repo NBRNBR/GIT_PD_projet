@@ -1,31 +1,22 @@
-#N canvas 236 52 790 637 10;
-#X obj 197 217 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 603 1;
-#X obj 118 216 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -261234
--1 -1 2527 1;
-#X obj 157 216 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -204786
--1 -1 516 1;
-#X floatatom 118 351 5 0 0 0 - - -, f 5;
-#X floatatom 157 351 5 0 0 0 - - -, f 5;
-#X floatatom 197 351 5 0 0 0 - - -, f 5;
-#X obj 118 370 s R;
-#X obj 157 370 s G;
-#X obj 197 370 s B;
+#N canvas 120 42 1114 637 10;
+#X obj 158 235 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
+-1 -1 1060 1;
+#X obj 113 235 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -261234
+-1 -1 1234 1;
+#X obj 136 235 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -204786
+-1 -1 353 1;
 #X obj 325 54 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 325 33 r attack;
-#X text 385 32 Receive Transient;
-#X text 122 395 Send color value;
 #X text 472 119 Apply randomness for the colors;
-#X obj 108 196 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
+#X obj 108 215 hsl 70 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
 -1 -1 0 1;
-#X obj 108 178 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -204786
+#X obj 108 197 hsl 70 15 0 127 0 0 empty empty empty -2 -8 0 10 -204786
 -1 -1 0 1;
-#X obj 108 160 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -261234
--1 -1 6000 1;
-#X text 119 160 red amount;
-#X text 134 177 green amount;
-#X text 159 196 blue amount;
+#X obj 108 179 hsl 70 15 0 1 0 0 empty empty empty -2 -8 0 10 -261234
+-1 -1 0 1;
+#X text 112 178 red amount;
+#X text 105 196 green amount;
+#X text 106 215 blue amount;
 #N canvas 1066 124 854 431 \$1-coloramount_red 0;
 #X floatatom 166 118 5 0 0 0 - - -, f 5;
 #X floatatom 166 158 5 0 0 0 - - -, f 5;
@@ -192,8 +183,8 @@ probably a better way to do this;
 #X connect 20 0 16 1;
 #X connect 21 1 23 0;
 #X restore 345 211 pd \$1-coloramount_blue;
-#X obj 157 195 r g_r;
-#X obj 197 195 r b_r;
+#X obj 29 164 r g_r;
+#X obj 31 181 r b_r;
 #N canvas 781 49 450 300 random 0;
 #X obj 6 157 * 0.001;
 #X obj 6 45 random 1000;
@@ -241,46 +232,57 @@ of the 256 values possible.;
 #X connect 5 0 2 1;
 #X connect 6 0 7 0;
 #X restore 399 102 pd random;
-#X msg 482 64 1;
 #X msg 515 64 0;
-#X text 484 48 On;
 #X text 515 47 Off;
 #X obj 538 22 loadbang;
-#X obj 118 195 r r_r;
-#X obj 193 142 s onoff;
-#X obj 155 129 tgl 25 0 empty empty empty 17 7 0 10 -4032 -1 -1 0 1
+#X obj 29 145 r r_r;
+#X obj 283 137 s onoff;
+#X obj 131 146 tgl 25 0 empty empty empty 17 7 0 10 -4032 -1 -1 1 1
 ;
-#X text 130 133 on;
-#X text 184 132 off;
+#X text 103 143 on, f 3;
+#X text 103 156 off;
 #X obj 518 92 r onoff;
-#X connect 0 0 5 0;
-#X connect 1 0 3 0;
-#X connect 2 0 4 0;
-#X connect 3 0 6 0;
-#X connect 4 0 7 0;
-#X connect 5 0 8 0;
-#X connect 9 0 27 0;
-#X connect 9 0 25 0;
-#X connect 9 0 26 0;
-#X connect 10 0 9 0;
-#X connect 14 0 22 1;
-#X connect 15 0 21 1;
-#X connect 16 0 20 1;
-#X connect 23 0 2 0;
-#X connect 24 0 0 0;
-#X connect 25 0 21 0;
-#X connect 26 0 22 0;
-#X connect 27 0 20 0;
-#X connect 28 0 27 1;
-#X connect 28 0 25 1;
-#X connect 28 0 26 1;
-#X connect 29 0 25 1;
-#X connect 29 0 26 1;
-#X connect 29 0 27 1;
-#X connect 32 0 29 0;
-#X connect 33 0 1 0;
-#X connect 35 0 34 0;
-#X connect 38 0 27 1;
-#X connect 38 0 25 1;
-#X connect 38 0 26 1;
-#X coords 0 -1 1 1 143 315 1 100 100;
+#X obj 97 426 outlet R;
+#X obj 153 426 outlet G;
+#X obj 208 426 outlet B;
+#X text 114 390 R;
+#X text 138 391 G;
+#X text 159 391 B;
+#X text 109 366 Send colors;
+#X text 124 378 values;
+#X obj 269 27 inlet attack;
+#X text 348 27 receive attack;
+#X text 100 117 color;
+#X text 100 130 randomness;
+#X text 177 101 e;
+#X text 100 100 a;
+#X text 139 101 p;
+#X obj 717 30 inlet pitch;
+#X text 790 28 receive pitch;
+#X obj 378 298 inlet enveloppe;
+#X text 473 298 receive enveloppe;
+#X connect 0 0 30 0;
+#X connect 1 0 28 0;
+#X connect 2 0 29 0;
+#X connect 3 0 18 0;
+#X connect 3 0 16 0;
+#X connect 3 0 17 0;
+#X connect 5 0 13 1;
+#X connect 6 0 12 1;
+#X connect 7 0 11 1;
+#X connect 14 0 2 0;
+#X connect 15 0 0 0;
+#X connect 16 0 12 0;
+#X connect 17 0 13 0;
+#X connect 18 0 11 0;
+#X connect 19 0 16 1;
+#X connect 19 0 17 1;
+#X connect 19 0 18 1;
+#X connect 21 0 19 0;
+#X connect 22 0 1 0;
+#X connect 24 0 23 0;
+#X connect 27 0 18 1;
+#X connect 27 0 16 1;
+#X connect 27 0 17 1;
+#X connect 36 0 3 0;
+#X coords 0 -1 1 1 90 305 2 100 100;
