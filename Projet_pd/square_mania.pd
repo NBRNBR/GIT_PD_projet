@@ -1,4 +1,4 @@
-#N canvas 236 229 1347 664 10;
+#N canvas 29 38 916 733 10;
 #X obj 477 337 rotateXYZ;
 #X obj 479 358 translateXYZ;
 #X obj 477 379 colorRGB;
@@ -49,7 +49,7 @@
 (en le passant dans rotate) \, mais je n'ai pas encore trouver comment
 faire passer l'info en temps réel avec des radios et spigot;
 #X obj 114 272 vradio 15 1 0 3 empty empty empty 0 -8 0 10 -204800
--1 -1 2;
+-1 -1 1;
 #X text 133 271 full;
 #X text 134 287 line;
 #X text 132 304 point;
@@ -86,6 +86,10 @@ faire passer l'info en temps réel avec des radios et spigot;
 #X text 492 24 *Un des "modules" de GEM \, reste beaucoup à faire
 dedans \, dont trouver un processus pour réussir à changer la forme
 grâce aux "radios".;
+#X obj 951 557 pack f f f;
+#X obj 970 508 t b f;
+#X obj 809 571 bondo 3;
+#X obj 804 611 pack f f f;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -127,4 +131,9 @@ grâce aux "radios".;
 #X connect 60 0 61 0;
 #X connect 61 0 1 1;
 #X connect 62 0 59 0;
+#X connect 65 0 64 0;
+#X connect 65 1 64 1;
+#X connect 66 0 67 0;
+#X connect 66 1 67 1;
+#X connect 66 2 67 2;
 #X coords 0 -1 1 1 200 225 2 100 100;
