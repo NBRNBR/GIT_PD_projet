@@ -1,8 +1,8 @@
-#N canvas 969 130 1126 700 10;
+#N canvas 0 22 1920 1036 10;
 #X obj 460 731 Loop_player;
 #X obj 657 812 line~;
 #X msg 657 792 \$1 20;
-#X obj 660 753 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 661 752 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X floatatom 657 775 5 0 0 0 - - -, f 5;
 #X obj 502 840 *~;
@@ -11,7 +11,7 @@
 #X obj 80 427 GEM_FUN;
 #X obj 623 713 Live_input;
 #X obj 34 26 GEM_win;
-#N canvas 863 237 680 490 audio_detection 0;
+#N canvas 277 126 680 490 audio_detection 0;
 #X obj 112 98 Helmholtz_1;
 #X obj 58 160 transients_detector;
 #X obj 58 139 suivi_amp;
@@ -28,39 +28,16 @@ sent into a transient detector;
 #X connect 5 0 0 1;
 #X restore 48 397 pd audio_detection;
 #X obj 213 32 color_randomness;
-#X obj 215 352 Back_control;
+#X obj 215 375 Back_control;
 #X obj 67 466 simple_color;
-#X obj 825 342 Feedbacker;
-#X obj 460 38 audio_detection;
+#X obj 1113 158 Feedbacker;
+#X obj 441 12 audio_detection;
 #X text 694 708 *Tentative d'amener du live input grâce à JACK \,
 mais j'ai laisser de côté ce problème là pour l'instant...;
-#X obj 632 476 feedbacker;
-#X obj 410 196 square_mania;
-#X text 746 18 *Voici donc où j'en suis rendu dans ma patch. En m'inspirant
-de la bibliothèque modulaire AUTOMATONISM \, version GEM \, j'aimerais
-créer le plus de modules visuels possible pour pouvoir permettre à
-l'utilisateur de rapidement expérimenter plusieurs combinaisons. Chaque
-module aurait ses entrées et sorties les plus génériques possible
-\, pour que la "learning curve" soit assez petite. Pour l'instant \,
-les entrées sont : attack \, enveloppe \, pitch et feedback. Les trois
-premiers sont des résultats d'analyses audio que l'on peut envoyer
-pour différents effets \, tandis que le feedback est un façon de
-dédoubler un module en particulier \, comme dans l'exemple présent.
-J'aimerais aussi ajouter des entrées pour que chaque modules puissent
-êtres modifiés dans sa couleur \, idéalement de façon dynamique.
-J'aimerais catégoriser les modules en deux catégories: avant-plan
-et arrière-plan \, pour faciliter les mélanges et ainsi éviter que
-l'écran devienne trop chargée rapidement. Une fois que j'aurai assez
-de modules pour que le visuel soit intéressant \, le défi sera de
-trouver une façon d'amener de la diversité pour que ça ne soit pas
-toujours la même animation qui reste à l'écran \, dans l'optique
-où les animations seraient projetées sur scène. Pour l'instant \,
-la patch s'ouvre avec des modules déjà en places mais pour la version
-finale \, j'aimerais avoir une interface similaire à celle d'AUTOMATONISM
-\, c'est-à-dire une patch blanche et vide \, avec une liste des objets
-disponibles \, pour inciter à l'expérimentation.;
+#X obj 1117 271 feedbacker;
+#X obj 741 132 square_mania;
 #X text 692 776 *Master volume pour entendre la tune;
-#X obj 410 434 square_mania;
+#X obj 466 137 square_mania;
 #X connect 0 0 5 0;
 #X connect 0 1 6 0;
 #X connect 1 0 6 1;
@@ -71,15 +48,3 @@ disponibles \, pour inciter à l'expérimentation.;
 #X connect 5 0 7 0;
 #X connect 6 0 7 1;
 #X connect 12 0 13 0;
-#X connect 12 1 13 1;
-#X connect 12 2 13 2;
-#X connect 15 0 19 2;
-#X connect 16 0 19 1;
-#X connect 16 1 19 3;
-#X connect 16 1 22 3;
-#X connect 16 2 12 0;
-#X connect 16 2 19 0;
-#X connect 16 2 22 0;
-#X connect 18 0 22 2;
-#X connect 19 0 15 0;
-#X connect 22 0 18 0;

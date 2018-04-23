@@ -3,11 +3,11 @@
 #X obj 119 91 pipe 5;
 #X floatatom 19 69 5 0 0 0 - - -, f 5;
 #X obj 161 32 hsl 128 15 0 20 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7870 1;
+-1 -1 10000 1;
 #X text 157 18 Délai du pipe;
 #X floatatom 158 52 5 0 0 0 - - -, f 5;
 #X obj 222 77 hsl 128 15 0 30 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 578 1;
+-1 -1 1532 1;
 #X floatatom 219 97 5 0 0 0 - - -, f 5;
 #X text 216 61 Threshold_dB;
 #X obj 82 154 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -262144
@@ -56,7 +56,7 @@
 #X text 436 4 Certain presets for various style of audio \, these are
 generic \, but it could worth trying differents one for better results
 ;
-#X msg 382 56 12 1.365 55;
+#X msg 382 56 15 3.54 55;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 1 0 14 1;
