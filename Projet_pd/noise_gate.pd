@@ -223,6 +223,7 @@
 #X obj 71 243 s~ no_noise;
 #X obj 218 133 loadbang;
 #X msg 218 151 1;
+#X obj 1 37 r~ livefeed;
 #X connect 0 0 11 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 1;
@@ -250,3 +251,4 @@
 #X connect 29 0 6 0;
 #X connect 31 0 32 0;
 #X connect 32 0 9 0;
+#X connect 33 0 0 0;

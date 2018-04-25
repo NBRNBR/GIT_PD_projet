@@ -1,10 +1,10 @@
 #N canvas 656 108 850 637 10;
 #X obj 158 235 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 599 1;
+-1 -1 0 1;
 #X obj 113 235 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -261234
--1 -1 455 1;
+-1 -1 0 1;
 #X obj 136 235 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -204786
--1 -1 1261 1;
+-1 -1 0 1;
 #X obj 365 180 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 512 245 Apply randomness for the colors;
@@ -71,7 +71,7 @@ of the 256 values possible.;
 #X obj 578 148 loadbang;
 #X obj 29 145 r r_r;
 #X obj 323 263 s onoff;
-#X obj 131 146 tgl 25 0 empty empty empty 17 7 0 10 -4032 -1 -1 1 1
+#X obj 131 146 tgl 25 0 empty empty empty 17 7 0 10 -4032 -1 -1 0 1
 ;
 #X text 103 143 on, f 3;
 #X text 103 156 off;
@@ -82,15 +82,15 @@ of the 256 values possible.;
 #X text 388 153 receive attack;
 #X text 100 117 color;
 #X text 100 130 randomness;
-#X text 177 101 e;
+#X text 175 81 e;
 #X text 100 100 a;
-#X text 139 101 p;
+#X text 137 81 p;
 #X obj 667 149 inlet pitch;
 #X text 740 147 receive pitch;
-#X obj 418 424 inlet enveloppe;
-#X text 513 424 receive enveloppe;
+#X obj 668 176 inlet enveloppe;
+#X text 763 176 receive enveloppe;
 #X text 483 34 Apply color randomness;
-#N canvas 1066 124 854 431 \$0-coloramount_red 0;
+#N canvas 735 140 854 431 \$0-coloramount_red 0;
 #X floatatom 166 118 5 0 0 0 - - -, f 5;
 #X floatatom 166 158 5 0 0 0 - - -, f 5;
 #X floatatom 367 118 5 0 0 0 - - -, f 5;
@@ -306,6 +306,8 @@ probably a better way to do this;
 #X connect 15 0 12 0;
 #X restore 82 499 pd grad time;
 #X obj 103 425 t b f;
+#X text 668 127 not usable at the moment;
+#X text 137 67 not usable at the moment;
 #X connect 0 0 53 2;
 #X connect 1 0 53 0;
 #X connect 2 0 53 1;

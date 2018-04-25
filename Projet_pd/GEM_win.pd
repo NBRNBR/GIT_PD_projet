@@ -88,7 +88,7 @@
 #X restore 142 488 pd gemwin;
 #X text 157 175 Lightnin Off;
 #X obj 109 130 vradio 15 1 0 4 gemwinwin empty empty 0 -8 0 10 -204800
--99865 -262144 1;
+-99865 -262144 0;
 #X text 106 199 Gem Windows size;
 #X text 108 379 Gem fps;
 #X text 107 311 Gem quality;
@@ -96,7 +96,7 @@
 #X text 193 237 Medium;
 #X text 199 252 Large;
 #X obj 109 221 vradio 15 1 0 5 gemsize empty empty 0 -8 0 10 -204800
--99865 -262144 2;
+-99865 -262144 1;
 #X text 192 331 Normal;
 #X text 216 345 x4;
 #X text 216 360 x8;

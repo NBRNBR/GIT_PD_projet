@@ -7,14 +7,16 @@
 #X floatatom 343 135 5 0 0 0 - - -, f 5;
 #X obj 316 33 inlet form;
 #X obj 231 311 outlet feedback;
-#X obj 108 118 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
-#X text 126 132 x;
-#X text 126 147 y;
-#X text 126 162 z;
-#X text 126 117 main;
-#X floatatom 124 211 5 0 0 0 - - -, f 5;
+#X obj 70 204 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X text 88 216 x;
+#X text 88 231 y;
+#X text 88 246 z;
+#X text 88 201 main;
+#X floatatom 85 290 5 0 0 0 - - -, f 5;
 #X msg 332 171 bang;
+#X text 111 126 Send me back;
+#X text 108 145 to an f input;
 #X connect 0 0 4 0;
 #X connect 0 1 1 0;
 #X connect 1 0 3 0;
@@ -26,4 +28,4 @@
 #X connect 5 0 4 1;
 #X connect 6 0 0 0;
 #X connect 8 0 13 0;
-#X coords 0 -1 1 1 100 100 1 100 100;
+#X coords 0 -1 1 1 100 75 1 100 100;

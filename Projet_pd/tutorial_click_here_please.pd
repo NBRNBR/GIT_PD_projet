@@ -1,0 +1,20 @@
+#N canvas 191 246 1013 683 10;
+#X obj 27 415 bng 15 250 50 0 empty empty information_to_the_different_inlet_and_to_cool_things.Have_fun_and_experiment!
+17 7 0 20 -262144 -262144 -45076;
+#X obj 28 108 bng 15 250 50 0 empty empty First_open_an_audio_file_in_the_bottom_section_of_the_main_patch
+17 7 0 20 -262144 -262144 -45076;
+#X obj 27 178 bng 15 250 50 0 empty empty Things_and_writings_numbers.This_is_good
+17 7 0 20 -262144 -262144 -45076;
+#X obj 25 243 bng 15 250 50 0 empty empty the_main_patch.Try_different_settings_to_see_what_they_do
+17 7 0 20 -262144 -262144 -45076;
+#X obj 26 298 bng 15 250 50 0 empty empty Then_open_a_visual_module_of_your_choice_besides_the_audio_detection_module
+17 7 0 20 -262144 -262144 -45076;
+#X obj 26 369 bng 15 250 50 0 empty empty the_correspondant_letters_you_can_now_send_pitch_enveloppe_and_attack
+17 7 0 20 -262144 -262144 -45076;
+#X obj 27 154 bng 15 250 50 0 empty empty Notice_that_the_audio_detection_module_at_the_top_of_your_screen_is_now_doing
+17 7 0 20 -262144 -262144 -45076;
+#X obj 26 219 bng 15 250 50 0 empty empty You_can_now_open_a_GEM_window_by_clicking_on_Create_window_at_the_top_left_of
+17 7 0 20 -262144 -262144 -45076;
+#X obj 26 347 bng 15 250 50 0 empty empty By_patching_the_audio_detection_module_outlets_to_the_audio_module_inlet_with
+17 7 0 20 -262144 -262144 -45076;
+#X coords 0 683 1 682 1750 300 0;

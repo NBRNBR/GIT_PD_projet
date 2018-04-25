@@ -1,0 +1,6 @@
+#N canvas 187 167 1582 683 10;
+#X obj 116 115 bng 370 250 50 0 empty empty How_all_of_this_works?
+410 180 0 60 -204800 -13330 -13330;
+#X obj 115 599 s create;
+#X connect 0 0 1 0;
+#X coords 0 -1 1 1 1250 400 2 100 100;
